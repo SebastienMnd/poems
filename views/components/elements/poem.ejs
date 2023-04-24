@@ -1,0 +1,6 @@
+<% poems.forEach(poem => { %>
+    <div class="card">
+        <a href="/poems/<%= poem.id %>"><%= poem.text %></a>
+        <p class="created_at"> <%= poem.created_at %> </p>
+    </div>
+<% }) %>

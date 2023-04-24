@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poèmes</title>
+
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header>
+        <%- include("../components/header.ejs") %>
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <h2> Information sur l'auteur </h2>
+        <section class="author">
+
+            <h3> <%= author.name.first %> <%= author.name.last %> </h3>
+            
+            <p class="birthday"> <%= author.birthday %> </p>
+            <p class="age"> <%= author.age %> ans </p>
+
+            <div class="details">
+                <h4> Adresse postale : </h4>
+                <p> <%= author.address.number %> <%= author.address.street %> </p>
+                <p> <%= author.address.city %> <%= author.address.postal_code %> </p>
+                <p> <%= author.address.country %> </p>
+
+                <h4> Numéro de téléphone : </h4>
+                <p> <%= author.phone %></p>
+            </div>
+
+        </section>
+
+        <h2> Poèmes de cet auteur </h2>
+
+        <section class="poems">
+            <%- include("../components/elements/poem.ejs") %>
+        </section>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+    </footer>
+</body>
+</html>

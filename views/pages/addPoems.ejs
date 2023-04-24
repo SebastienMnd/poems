@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poèmes</title>
+
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header>
+        <%- include("../components/header.ejs") %>
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+        <h2> Formulaire de création d'un poème </h2>
+
+        <section>
+
+            <form class="poem" method="post" action="/poems">
+
+                <h3> <label for="text">  Poème  </label></h3>
+                <textarea name="text" id="text"  rows="10" placeholder="Écrivez votre poème ..." required></textarea>
+    
+                <h3> Auteur </h3>
+                <div class="radio">
+
+                <% authors.forEach(author => { %>
+                    <input type="radio" name="author" id="<%= author.id %>" value="<%= author.id %>">
+                    <label class="author" for="<%= author.id %>"> <%= author.name.first %></label>
+                    <% }) %>
+
+                </div>
+    
+                <input type="submit" value="Ajouter le poème">
+            </form>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+    </footer>
+</body>
+</html>

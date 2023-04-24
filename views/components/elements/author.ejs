@@ -1,0 +1,6 @@
+<% authors.forEach(author => { %>
+<div class="card">
+  <a href="/authors/<%= author.id %>"><%= author.name.first %> <%= author.name.last %></a>
+  <p class="age"><%= author.age %> ans</p>
+</div>
+<% }) %>

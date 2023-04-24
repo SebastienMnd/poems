@@ -1,0 +1,29 @@
+section.poems .card {
+    height: 100px;
+    padding-left: 50px;
+    margin-bottom: 15px;
+  
+    display: flex;
+    align-items: center;
+    
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 35px;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.15);
+  
+    background-color: var(--bg-color-1);
+
+    position: relative;
+}
+
+section.poems .card:nth-child(even) {
+    background-color: var(--bg-color-3);
+}
+
+section.poems .card p.created_at {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+
+    color: #808080;
+    font-weight: 200;
+}

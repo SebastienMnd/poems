@@ -1,0 +1,35 @@
+section.authors {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 20px;
+}
+
+section.authors .card {
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+  
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 20px 100px 100px 100px;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.15);
+
+  background-color: var(--bg-color-1);
+
+  transition: .3s;
+  cursor: pointer;
+}
+
+section.authors .card:hover {
+  color: #fff;
+}
+
+section.authors .card:nth-child(even) {
+  background-color: var(--bg-color-3);
+}

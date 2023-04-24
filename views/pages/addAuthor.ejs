@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poèmes</title>
+
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header>
+        <%- include("../components/header.ejs") %>
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+        <h2> Formulaire de création d'un auteur </h2>
+
+        <section>
+
+            <form class="author" method="post" action="/authors">
+
+                <h3> Informations requises </h3>
+
+                <label for="firstname"> Prénom </label>
+                <input type="text" name="firstname" id="firstname" placeholder="Prénom" required>
+    
+                <label for="lastname"> Nom </label>
+                <input type="text" name="lastname" id="lastname" placeholder="Nom" required>
+    
+                <label for="birthday"> Date de naissance</label>
+                <input type="date" name="birthday" id="birthday">
+    
+                <label for="age"> Âge </label>
+                <input type="number" name="age" id="age" placeholder="Âge" min="0" max="100" required>
+    
+    
+                <h3> Coordonnées </h3>
+                
+                <label for="adr_number"> Numéro de rue </label>
+                <input type="number" name="adr_number" id="adr_number" placeholder="Numéro de rue">
+    
+                <label for="adr_street">Rue</label>
+                <input type="text" name="adr_street" id="adr_street" placeholder="Rue">
+    
+                <label for="adr_city"> Ville </label>
+                <input type="text" name="adr_city" id="adr_city" placeholder="Ville">
+    
+                <label for="adr_cde"> Code Postal </label>
+                <input type="text" name="adr_cde" id="adr_cde" placeholder="Code postal">
+    
+                <label for="adr_country">Pays</label>
+                <input type="text" name="adr_country" id="adr_country" placeholder="Pays">
+    
+                <label for="phone">Numéro de téléphone</label>
+                <input type="tel" name="phone" id="phone" placeholder="Numéro de téléphone">
+    
+                <input type="submit" value="Ajouter l'auteur">
+            </form>
+
+        </section>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+    </footer>
+</body>
+</html>

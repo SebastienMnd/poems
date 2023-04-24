@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url(./normalize.css);
+
+@import url(./components/header.css);
+@import url(./components/authors.css);
+@import url(./components/poems.css);
+@import url(./components/forms.css);
+@import url(./components/alerts.css);
+
+
+:root {
+    --color-1 : #e3e3e3;
+
+    --bg-color-1 : #ED7B84;
+    --bg-color-2 : #F5DBCB;
+    --bg-color-3 : #D6D5B3;
+}
+
+
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans serif;
+}
+
+main {
+    width: 100%;
+    min-height: 50vh;
+    gap: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > h2 {
+    width: 400px;
+    text-align: center;
+
+    padding-bottom: 15px;
+    
+    position: relative;
+}
+
+main > h2::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+
+section {
+    width: 85%;
+}
